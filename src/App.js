@@ -1,47 +1,63 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import {motion, Reorder} from 'framer-motion'
+import {motion, Reorder} from 'framer-motion';
 
 
-const ACCESS_TOKEN = "ya29.a0AbVbY6OfryxXAgLazjtmTn14W5TkNQH2oTmo6NVOt6XoBR4EAaFeODLN6KuFnVj-oz3fNnyngVECdm1mjfizfx_11WwQE6kxTIV48hzC-cTDkd21WwMj9p8iTvkLGUUzL_CUpSvcHU2NV8HPZwwrHDrdlwP4aCgYKAeESARISFQFWKvPlmm3ESGk9P8GtkN3xolsZcg0163"
+const ACCESS_TOKEN = "ya29.a0AbVbY6OswEBMV2D0465Sy-wMSCQtnN_BlmKVF5Mpo-mrNgrn8TrCHIBT_qdH94saZLbltl5hFwRFxNIF6iEzmlIb7f-OAvP55Mg8xTiOOaPMH7eqwjGnLeJuZOD6ups7jcZ9lCmTmM-jR-kQsPen3RlLB6m5aCgYKAcESARISFQFWKvPlYE1_l1Gh0Eug_gu1oA5nug0163"
 const SHEET_ID = "1E2dtvCZzllJXFqhZP2kLfNWAihF52KTuB4NJKrbP5CY"
 
 function App() {
   
   const [advocacyData, setAdvocacyData] = useState([]);
+  const [sortedData, setSortedData] = useState([]);
 
 
+  try {
   useEffect(() => {
-    const interval = setInterval(() => {
-      updateLeaderboard();
-      console.log("Updated")
-    }, 5000)
-    return () => clearInterval(interval);
+      const interval = setInterval(() => {
+        updateLeaderboard();
+        console.log("Updated")
+      }, 5000)
+      return () => clearInterval(interval);    
   }, [advocacyData])
+
+} catch(e) {
+    console.log("errorE")
+}
+
   
   const updateLeaderboard = async() => {
+    try{
+      const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/A1:B250`, {
+        method: "GET",
+        headers: new Headers({ 'Authorization': 'Bearer ' + ACCESS_TOKEN})
+      })
+        const apiResponse = await request.json();
+        console.log(apiResponse + "yoo"); 
+        setAdvocacyData(apiResponse.values)
+        checkSlice();
+    } catch(e) {
+      console.log("error")
+    }
+    }
 
-    const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/A1:B250`, {
-      method: "GET",
-      headers: new Headers({ 'Authorization': 'Bearer ' + ACCESS_TOKEN})
-    })
-      const apiResponse = await request.json();
-  
-      console.log(apiResponse);          
-      setAdvocacyData(apiResponse.values)
-
-  }
-
-  const arrayDataItems = advocacyData.slice(1).map((advocate) => advocate);
-  const sortedData = arrayDataItems.sort((a,b) => b[1] - a[1])
-  const awards = ["🥇", "🥈", "🥉"]
-
-  console.log((sortedData))
-  if (sortedData.length > 1) {
-    for (var i=0; i < awards.length; i++) {
-      if (i<3) sortedData[i].push(awards[i]);
+  const checkSlice = async() => {
+    try {
+      const arrayDataItems = advocacyData.slice(1).map((advocate) => advocate);
+      setSortedData(arrayDataItems.sort((a,b) => b[1] - a[1]))
+      const awards = ["🥇", "🥈", "🥉"]
+      console.log((sortedData))
+      if (sortedData.length > 1) {
+        for (var i=0; i < awards.length; i++) {
+          if (i<3) sortedData[i].push(awards[i]);
+        }
+      }
+    } catch(e) {
+      setSortedData([])
     }
   }
+
+
 
   var date = new Date();
   var dateStr =
