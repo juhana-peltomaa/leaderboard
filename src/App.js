@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import {motion, Reorder} from 'framer-motion';
 
 
-const ACCESS_TOKEN = "ya29.a0AbVbY6OswEBMV2D0465Sy-wMSCQtnN_BlmKVF5Mpo-mrNgrn8TrCHIBT_qdH94saZLbltl5hFwRFxNIF6iEzmlIb7f-OAvP55Mg8xTiOOaPMH7eqwjGnLeJuZOD6ups7jcZ9lCmTmM-jR-kQsPen3RlLB6m5aCgYKAcESARISFQFWKvPlYE1_l1Gh0Eug_gu1oA5nug0163"
+const ACCESS_TOKEN = "ya29.a0AbVbY6MsjNhTP2xlmyxK6Y08NQl3CLPKp_pVTiZZ_twChfKo6y5-iB-9EQ4X_c3RwgRKF59MyaK8HWwLPQcDHkgiNrQZAiQ95_tAn7FRYqmhCOmVLPK3D-pdrXU7swh8BjxZqcDT7d6t4P0QfLemfA-0Cv9CiewaCgYKAdISARISFQFWKvPlMDdlvwilQHl_f4AvoJKXRw0166"
 const SHEET_ID = "1E2dtvCZzllJXFqhZP2kLfNWAihF52KTuB4NJKrbP5CY"
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
         method: "GET",
         headers: new Headers({ 'Authorization': 'Bearer ' + ACCESS_TOKEN})
       })
+
         const apiResponse = await request.json();
         console.log(apiResponse + "yoo"); 
         setAdvocacyData(apiResponse.values)
@@ -74,6 +75,7 @@ function App() {
 
 
     <div className="bg-gradient-to-bl min-h-screen from-sky-400 to-indigo-500">
+
     <div className="container md:max-w-2xl mx-auto px-4 sm:px-8">
       <div className="py-8">
           <h2 className="text-2xl font-bold leading-tight text-center">FP&A Week - Employee Advocacy leaderboard 🏆</h2>
@@ -91,7 +93,9 @@ function App() {
               <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white text-black bg-gray-300">
                 What is this? 👀
                 <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
-                 This Employee Advocacy Leaderboard updates every <strong>5 seconds</strong></p>
+                 This Employee Advocacy Leaderboard updates automatically every <strong>5 seconds</strong></p>
+                 <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
+                 You can click the <strong>Update leaderboard</strong> button to automate more frequently</p>
                   <p className="border-b-2 pb-5 border-gray-200 mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
                   </p>
                   <p className="font-semibold pt-5 text-lg text-center">Last update:</p>
