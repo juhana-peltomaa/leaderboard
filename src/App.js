@@ -54,7 +54,7 @@ function App() {
         }
       }
     } catch(e) {
-      setSortedData([])
+      setSortedData(sortedData)
     }
   }
 
@@ -111,9 +111,9 @@ function App() {
                     className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                     Clicks
                   </th>
-                  <th
+                  {/* <th
                     className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  </th>
+                  </th> */}
                 </tr>
               </thead>
               
@@ -132,13 +132,13 @@ function App() {
                     <p className="text-gray-900 whitespace-no-wrap">{advodate[1]}</p>
                     <p className="text-gray-600 whitespace-no-wrap">clicks</p>
                   </td>
-                  <td className="px-5 py-5 hover:bg-gray-100 border-b border-gray-200 bg-white text-sm">
+                  {/* <td className="px-5 py-5 hover:bg-gray-100 border-b border-gray-200 bg-white text-sm">
                     <span
                       className="relative inline-block text-2xl py-3 font-semibold text-green-900 leading-tight">
                       <span aria-hidden className="absolute inset-0 opacity-50 rounded-full"></span>
                       <span className="relative">{advodate[3]}</span>
                     </span>
-                  </td>
+                  </td> */}
                   
                 </Reorder.Item> )}
                
