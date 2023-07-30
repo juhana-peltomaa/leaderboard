@@ -1,7 +1,6 @@
 {
   "name": "leaderboard-app",
-  "homepage": "https://jjuhana-peltomaa.github.io/leaderboard-app",
-
+  "homepage": "https://juhana-peltomaa.github.io/leaderboard-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
