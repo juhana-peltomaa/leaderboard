@@ -91,7 +91,7 @@ function App() {
               <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white text-black bg-gray-300">
                 What is this? 👀
                 <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
-                 The FP&A Week Employee Advocacy Leaderboard updates every <strong>5 seconds</strong></p>
+                 This Employee Advocacy Leaderboard updates every <strong>5 seconds</strong></p>
                   <p className="border-b-2 pb-5 border-gray-200 mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
                   </p>
                   <p className="font-semibold pt-5 text-lg text-center">Last update:</p>
