@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/leaderboard-app/static/css/main.0b8db831.css",
-    "main.js": "/leaderboard-app/static/js/main.25429f52.js",
-    "static/js/787.73140abb.chunk.js": "/leaderboard-app/static/js/787.73140abb.chunk.js",
-    "index.html": "/leaderboard-app/index.html",
-    "main.0b8db831.css.map": "/leaderboard-app/static/css/main.0b8db831.css.map",
-    "main.25429f52.js.map": "/leaderboard-app/static/js/main.25429f52.js.map",
-    "787.73140abb.chunk.js.map": "/leaderboard-app/static/js/787.73140abb.chunk.js.map"
+    "main.css": "/leaderboard/static/css/main.0b8db831.css",
+    "main.js": "/leaderboard/static/js/main.413ea5d1.js",
+    "static/js/787.73140abb.chunk.js": "/leaderboard/static/js/787.73140abb.chunk.js",
+    "index.html": "/leaderboard/index.html",
+    "main.0b8db831.css.map": "/leaderboard/static/css/main.0b8db831.css.map",
+    "main.413ea5d1.js.map": "/leaderboard/static/js/main.413ea5d1.js.map",
+    "787.73140abb.chunk.js.map": "/leaderboard/static/js/787.73140abb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b8db831.css",
-    "static/js/main.25429f52.js"
+    "static/js/main.413ea5d1.js"
   ]
 }
