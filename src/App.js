@@ -17,7 +17,7 @@ function App() {
       const interval = setInterval(() => {
         updateLeaderboard();
         console.log("Updated")
-      }, 5000)
+      }, 300000)
       return () => clearInterval(interval);    
   }, [advocacyData])
 
@@ -93,7 +93,7 @@ function App() {
               <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white text-black bg-gray-300">
                 What is this? 👀
                 <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
-                 This Employee Advocacy Leaderboard updates automatically every <strong>5 seconds</strong></p>
+                 This Employee Advocacy Leaderboard updates automatically every <strong>5 minutes</strong></p>
                  <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
                  You can click the <strong>Update leaderboard</strong> button to update more frequently</p>
                   <p className="border-b-2 pb-5 border-gray-200 mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
