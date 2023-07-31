@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import {motion, Reorder} from 'framer-motion';
 
 
-const ACCESS_TOKEN = "ya29.a0AbVbY6MoT41fR-e54Bh9jX92eB04M3nY9y6MwtCtoKUgoOWsYcwYJlQvdauKyCJ1BTI5wcxh3OA6wSQ1VwcbhRdMwDYIy-5tfuLjNCTiC8NBiBDryKKJnLMSo9LDaflr11MfD_TS8GQe0ekojN6-aJJl647Oj90aCgYKAUsSARISFQFWKvPlcFY4xCDFjFmKOB9B2hpPBQ0166"
+const ACCESS_TOKEN = "ya29.a0AbVbY6OJVFIJDU58FBuEPywJrI1RkTrFMAJ-25b6d5w87vC6W1C-5KodusJ9z-o7_0gbT9P_G7eiyOtOaJYRlnzFUzIeZFLUNGPl-NvPYluf88RYpdsTmcC4SnibtsRE5c2BKIx1bEsgKWJVSnGDT9e7NRQXaCgYKASYSARISFQFWKvPl2Oguk3OlEpVCLljwRXmmZA0163"
 const SHEET_ID = "1E2dtvCZzllJXFqhZP2kLfNWAihF52KTuB4NJKrbP5CY"
 
 function App() {
@@ -95,7 +95,7 @@ function App() {
                 <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
                  This Employee Advocacy Leaderboard updates automatically every <strong>5 seconds</strong></p>
                  <p className="mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
-                 You can click the <strong>Update leaderboard</strong> button to automate more frequently</p>
+                 You can click the <strong>Update leaderboard</strong> button to update more frequently</p>
                   <p className="border-b-2 pb-5 border-gray-200 mt-1 text-sm font-normal text-gray-900 dark:text-gray-900">
                   </p>
                   <p className="font-semibold pt-5 text-lg text-center">Last update:</p>
