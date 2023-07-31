@@ -73,8 +73,8 @@ function App() {
 
   return (
 
-
     <div className="bg-gradient-to-bl min-h-screen from-sky-400 to-indigo-500">
+      
 
     <div className="container md:max-w-2xl mx-auto px-4 sm:px-8">
       <div className="py-8">
